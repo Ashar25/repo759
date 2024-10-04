@@ -22,10 +22,10 @@ float fval(const float *image, std::size_t x, std::size_t y, std::size_t n){
 //     return 1.0f;     
 // }
 void convolve(const float *image, float *output, std::size_t n, const float *mask, std::size_t m){
-    for(int x = 0; x <n; x++){
-        for(int y = 0; y < n; y++){
-            for(int i = 0; i < m; i++){
-                for(int j = 0; j < m; j++){
+    for(std::size_t x = 0; x <n; x++){
+        for(std::size_t y = 0; y < n; y++){
+            for(std::size_t i = 0; i < m; i++){
+                for(std::size_t j = 0; j < m; j++){
                     output[x*n+y] += mask[i*m+j]*fval(image,x+i-(m-1)/2,y+j-(n-1)/2,n);
                 }
             }
