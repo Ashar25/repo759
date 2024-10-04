@@ -14,7 +14,7 @@ int main(){
     high_resolution_clock::time_point end;
     std::random_device rd;   
     std::mt19937 gen(rd());  
-    std::uniform_real_distribution<> dis(1, 10);   // I found this through ChatGPT
+    std::uniform_real_distribution<> dis(-1, 1);   // I found this through ChatGPT
     duration<double, std::milli> duration_sec1; 
     duration<double,std::milli> duration_sec2;
     duration<double,std::milli> duration_sec3;
